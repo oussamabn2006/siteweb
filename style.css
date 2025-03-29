@@ -1,0 +1,768 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000A26; /* Deep Navy */
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes neonGlow {
+    0% {
+        box-shadow: 0 0 5px #0F52BA, 0 0 10px #0F52BA, 0 0 15px #0F52BA; /* Sapphire */
+    }
+    50% {
+        box-shadow: 0 0 10px #0F52BA, 0 0 20px #0F52BA, 0 0 30px #0F52BA; /* Sapphire */
+    }
+    100% {
+        box-shadow: 0 0 5px #0F52BA, 0 0 10px #0F52BA, 0 0 15px #0F52BA; /* Sapphire */
+    }
+}
+
+/* Header Styling */
+header {
+    background: #000A26; /* Deep Navy */
+    color: #fff;
+    padding: 1.5rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+header.scrolled {
+    background: rgba(0, 10, 38, 0.95); /* Deep Navy with opacity */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sticky-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+    color: #0F52BA; /* Sapphire */
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav ul li a {
+    color: #D6E6F2; /* Ice Blue */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #0F52BA; /* Sapphire */
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #0F52BA; /* Sapphire */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #0F52BA, #000A26); /* Sapphire to Deep Navy */
+    color: #D6E6F2; /* Ice Blue */
+    text-align: center;
+    padding: 10rem 2rem;
+    margin-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-out;
+    text-shadow: 0 0 10px rgba(15, 82, 186, 0.5); /* Sapphire shadow */
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2.5rem;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+.neon-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    border: 2px solid #0F52BA; /* Sapphire */
+    color: #0F52BA; /* Sapphire */
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    animation: fadeInUp 1.4s ease-out;
+}
+
+.neon-btn:hover {
+    background: #0F52BA; /* Sapphire */
+    color: #D6E6F2; /* Ice Blue */
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px #0F52BA, 0 0 20px #0F52BA; /* Sapphire glow */
+    animation: neonGlow 1.5s infinite;
+}
+
+/* Features Section */
+.features {
+    max-width: 1200px;
+    margin: 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 0 2rem;
+}
+
+.feature-card {
+    background: #A6C0D8; /* Powder Blue */
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(15, 82, 186, 0.3); /* Sapphire shadow */
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #000A26; /* Deep Navy */
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #000A26; /* Deep Navy */
+}
+
+/* Featured Products Section */
+.featured-products {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.featured-products h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+    color: #0F52BA; /* Sapphire */
+}
+
+.product-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    scroll-behavior: smooth;
+    padding-bottom: 1rem;
+}
+
+.product-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.product-carousel::-webkit-scrollbar-thumb {
+    background: #0F52BA; /* Sapphire */
+    border-radius: 10px;
+}
+
+.product-carousel::-webkit-scrollbar-track {
+    background: #A6C0D8; /* Powder Blue */
+}
+
+/* Products Section */
+.products {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.products h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+    color: #0F52BA; /* Sapphire */
+}
+
+.product-filter-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.product-filter-search input,
+.product-filter-search select {
+    padding: 0.75rem;
+    border: 1px solid #0F52BA; /* Sapphire */
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #A6C0D8; /* Powder Blue */
+    color: #000A26; /* Deep Navy */
+    transition: border-color 0.3s ease;
+}
+
+.product-filter-search input:focus,
+.product-filter-search select:focus {
+    border-color: #0F52BA; /* Sapphire */
+    outline: none;
+    box-shadow: 0 0 5px #0F52BA; /* Sapphire */
+}
+
+.product-filter-search p {
+    color: #D6E6F2; /* Ice Blue */
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: #A6C0D8; /* Powder Blue */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(15, 82, 186, 0.3); /* Sapphire shadow */
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    font-size: 1.3rem;
+    margin: 1rem 0 0.5rem;
+    color: #000A26; /* Deep Navy */
+}
+
+.product-card p {
+    font-size: 1.1rem;
+    color: #000A26; /* Deep Navy */
+    margin-bottom: 1rem;
+}
+
+/* Quick View Modal */
+.quick-view-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 10, 38, 0.8); /* Deep Navy with opacity */
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+}
+
+.quick-view-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #A6C0D8; /* Powder Blue */
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #000A26; /* Deep Navy */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #0F52BA; /* Sapphire */
+}
+
+.modal-content img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+    color: #000A26; /* Deep Navy */
+    margin-bottom: 0.5rem;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    color: #000A26; /* Deep Navy */
+    margin-bottom: 1rem;
+}
+
+/* Recently Viewed Section */
+.recently-viewed {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.recently-viewed h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+    color: #0F52BA; /* Sapphire */
+}
+
+/* Cybersecurity Tips Section */
+.cyber-tips {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.cyber-tips h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+    color: #0F52BA; /* Sapphire */
+}
+
+.tips-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.tip-card {
+    background: #A6C0D8; /* Powder Blue */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(15, 82, 186, 0.3); /* Sapphire shadow */
+}
+
+.tip-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #000A26; /* Deep Navy */
+}
+
+.tip-card p {
+    font-size: 1rem;
+    color: #000A26; /* Deep Navy */
+}
+
+/* Testimonials Section */
+.testimonials {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+    color: #0F52BA; /* Sapphire */
+}
+
+.testimonial-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.testimonial-card {
+    background: #A6C0D8; /* Powder Blue */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(15, 82, 186, 0.3); /* Sapphire shadow */
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    color: #000A26; /* Deep Navy */
+    margin-bottom: 1rem;
+}
+
+.testimonial-card h4 {
+    font-size: 1.1rem;
+    color: #000A26; /* Deep Navy */
+}
+
+/* CTA Banner Section */
+.cta-banner {
+    background: linear-gradient(135deg, #0F52BA, #000A26); /* Sapphire to Deep Navy */
+    text-align: center;
+    padding: 5rem 2rem;
+    margin: 5rem 0;
+}
+
+.cta-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out;
+    color: #D6E6F2; /* Ice Blue */
+}
+
+.cta-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1.2s ease-out;
+    color: #D6E6F2; /* Ice Blue */
+}
+
+/* Pagination */
+.pagination {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.pagination .btn {
+    margin: 0 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #A6C0D8; /* Powder Blue */
+    border: 1px solid #0F52BA; /* Sapphire */
+    color: #000A26; /* Deep Navy */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.pagination .btn:hover {
+    background: #0F52BA; /* Sapphire */
+    color: #D6E6F2; /* Ice Blue */
+    transform: translateY(-3px);
+}
+
+.pagination .btn.active {
+    background: #0F52BA; /* Sapphire */
+    color: #D6E6F2; /* Ice Blue */
+}
+
+.pagination .btn:active {
+    animation: pulse 0.3s ease;
+}
+
+/* Cart Page */
+.cart {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.cart h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #0F52BA; /* Sapphire */
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #A6C0D8; /* Powder Blue */
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.cart-item button {
+    padding: 0.5rem 1rem;
+    background: #ff4d4d;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cart-item button:hover {
+    background: #e60000;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #0F52BA; /* Sapphire */
+}
+
+/* Product Details Page */
+.product-details {
+    max-width: 1200px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.product-details img {
+    max-width: 50%;
+    border-radius: 10px;
+}
+
+.product-details .details {
+    flex: 1;
+}
+
+.product-details h1 {
+    font-size: 2rem;
+    color: #0F52BA; /* Sapphire */
+    margin-bottom: 1rem;
+}
+
+.product-details p {
+    font-size: 1.2rem;
+    color: #D6E6F2; /* Ice Blue */
+    margin-bottom: 1rem;
+}
+
+.reviews {
+    margin-top: 2rem;
+}
+
+.reviews h2 {
+    font-size: 1.5rem;
+    color: #0F52BA; /* Sapphire */
+    margin-bottom: 1rem;
+}
+
+.review {
+    background: #A6C0D8; /* Powder Blue */
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    color: #000A26; /* Deep Navy */
+}
+
+.review-form {
+    margin-top: 2rem;
+}
+
+.review-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #0F52BA; /* Sapphire */
+    border-radius: 5px;
+    background: #A6C0D8; /* Powder Blue */
+    color: #000A26; /* Deep Navy */
+    margin-bottom: 1rem;
+}
+
+.review-form button {
+    padding: 0.75rem 1.5rem;
+    background: #0F52BA; /* Sapphire */
+    border: none;
+    color: #D6E6F2; /* Ice Blue */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.review-form button:hover {
+    background: #000A26; /* Deep Navy */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #000A26; /* Deep Navy */
+    color: #D6E6F2; /* Ice Blue */
+    margin-top: 5rem;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #0F52BA; /* Sapphire */
+    color: #D6E6F2; /* Ice Blue */
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    transition: background 0.3s ease;
+}
+
+.back-to-top:hover {
+    background: #000A26; /* Deep Navy */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sticky-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .product-filter-search {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .product-details {
+        flex-direction: column;
+    }
+
+    .product-details img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 5rem 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .neon-btn {
+        padding: 0.75rem 1.5rem;
+    }
+
+    .feature-card,
+    .tip-card,
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+}
