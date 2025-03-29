@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShop - Products Page 2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="sticky-nav">
+            <div class="logo">CyberShop</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="products" data-aos="fade-up">
+        <h1>Our Products</h1>
+        <div class="product-filter-search">
+            <input type="text" id="search" placeholder="Search products...">
+            <select id="filter">
+                <option value="all">All Categories</option>
+                <option value="firewall">Firewall</option>
+                <option value="vpn">VPN</option>
+                <option value="antivirus">Antivirus</option>
+                <option value="encryption">Encryption</option>
+            </select>
+            <p>Showing <span id="product-count">20</span> products</p>
+        </div>
+        <div class="product-list">
+            <div class="product-card" data-id="21" data-category="firewall">
+                <img src="https://images.unsplash.com/photo-1633114128151-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Firewall Guardian">
+                <h3>Firewall Guardian</h3>
+                <p>$139.99</p>
+                <a href="product.html?id=21" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="22" data-category="vpn">
+                <img src="https://images.unsplash.com/photo-1633114128201-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="VPN Stealth">
+                <h3>VPN Stealth</h3>
+                <p>$44.99</p>
+                <a href="product.html?id=22" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="23" data-category="antivirus">
+                <img src="https://images.unsplash.com/photo-1633114128251-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Antivirus Defender">
+                <h3>Antivirus Defender</h3>
+                <p>$84.99</p>
+                <a href="product.html?id=23" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="24" data-category="encryption">
+                <img src="https://images.unsplash.com/photo-1633114128301-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Crypto Lock">
+                <h3>Crypto Lock</h3>
+                <p>$64.99</p>
+                <a href="product.html?id=24" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="25" data-category="firewall">
+                <img src="https://images.unsplash.com/photo-1633114128351-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Firewall Shield">
+                <h3>Firewall Shield</h3>
+                <p>$119.99</p>
+                <a href="product.html?id=25" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="26" data-category="vpn">
+                <img src="https://images.unsplash.com/photo-1633114128401-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="VPN Guardian">
+                <h3>VPN Guardian</h3>
+                <p>$54.99</p>
+                <a href="product.html?id=26" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="27" data-category="antivirus">
+                <img src="https://images.unsplash.com/photo-1633114128451-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Antivirus Secure">
+                <h3>Antivirus Secure</h3>
+                <p>$94.99</p>
+                <a href="product.html?id=27" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="28" data-category="encryption">
+                <img src="https://images.unsplash.com/photo-1633114128501-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Data Vault">
+                <h3>Data Vault</h3>
+                <p>$74.99</p>
+                <a href="product.html?id=28" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="29" data-category="firewall">
+                <img src="https://images.unsplash.com/photo-1633114128551-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Firewall Defender">
+                <h3>Firewall Defender</h3>
+                <p>$169.99</p>
+                <a href="product.html?id=29" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="30" data-category="vpn">
+                <img src="https://images.unsplash.com/photo-1633114128601-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="VPN Elite Pro">
+                <h3>VPN Elite Pro</h3>
+                <p>$64.99</p>
+                <a href="product.html?id=30" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="31" data-category="firewall">
+                <img src="https://images.unsplash.com/photo-1633114128651-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Firewall Sentinel">
+                <h3>Firewall Sentinel</h3>
+                <p>$189.99</p>
+                <a href="product.html?id=31" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="32" data-category="vpn">
+                <img src="https://images.unsplash.com/photo-1633114128701-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="VPN Shield">
+                <h3>VPN Shield</h3>
+                <p>$34.99</p>
+                <a href="product.html?id=32" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="33" data-category="antivirus">
+                <img src="https://images.unsplash.com/photo-1633114128751-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Antivirus Guardian">
+                <h3>Antivirus Guardian</h3>
+                <p>$104.99</p>
+                <a href="product.html?id=33" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="34" data-category="encryption">
+                <img src="https://images.unsplash.com/photo-1633114128801-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Crypto Shield">
+                <h3>Crypto Shield</h3>
+                <p>$84.99</p>
+                <a href="product.html?id=34" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="35" data-category="firewall">
+                <img src="https://images.unsplash.com/photo-1633114128851-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Firewall Pro Elite">
+                <h3>Firewall Pro Elite</h3>
+                <p>$199.99</p>
+                <a href="product.html?id=35" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="36" data-category="vpn">
+                <img src="https://images.unsplash.com/photo-1633114128901-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="VPN Ultra Pro">
+                <h3>VPN Ultra Pro</h3>
+                <p>$74.99</p>
+                <a href="product.html?id=36" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="37" data-category="antivirus">
+                <img src="https://images.unsplash.com/photo-1633114128951-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Antivirus Elite Pro">
+                <h3>Antivirus Elite Pro</h3>
+                <p>$124.99</p>
+                <a href="product.html?id=37" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="38" data-category="encryption">
+                <img src="https://images.unsplash.com/photo-1633114129001-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Data Guardian">
+                <h3>Data Guardian</h3>
+                <p>$94.99</p>
+                <a href="product.html?id=38" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="39" data-category="firewall">
+                <img src="https://images.unsplash.com/photo-1633114129051-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Firewall Ultra Pro">
+                <h3>Firewall Ultra Pro</h3>
+                <p>$209.99</p>
+                <a href="product.html?id=39" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="40" data-category="vpn">
+                <img src="https://images.unsplash.com/photo-1633114129101-4f1e4b6e4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="VPN Secure Pro">
+                <h3>VPN Secure Pro</h3>
+                <p>$84.99</p>
+                <a href="product.html?id=40" class="neon-btn">View Details</a>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+        </div>
+        <div class="pagination">
+            <a href="products.html" class="btn">1</a>
+            <a href="products-page2.html" class="btn active">2</a>
+            <a href="products-page3.html" class="btn">3</a>
+        </div>
+    </section>
+
+    <div class="quick-view-modal" id="quick-view-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" src="" alt="Product">
+            <h3 id="modal-name"></h3>
+            <p id="modal-price"></p>
+            <p id="modal-desc"></p>
+            <button class="add-to-cart neon-btn" id="modal-add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <button class="back-to-top">↑</button>
+
+    <footer>
+        <p>&copy; 2025 CyberShop. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

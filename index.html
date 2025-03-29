@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShop - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="sticky-nav">
+            <div class="logo">CyberShop</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" data-aos="fade-up">
+        <h1>Secure Your Future</h1>
+        <p>Top-tier cybersecurity solutions for all your needs.</p>
+        <a href="products.html" class="btn neon-btn">Shop Now</a>
+    </section>
+
+    <section class="features" data-aos="fade-up">
+        <div class="feature-card" data-aos="zoom-in">
+            <h3>Advanced Protection</h3>
+            <p>Best-in-class tools to safeguard your data.</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+            <h3>Fast Delivery</h3>
+            <p>Get your products in record time.</p>
+        </div>
+        <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+            <h3>24/7 Support</h3>
+            <p>We’re here to help anytime.</p>
+        </div>
+    </section>
+
+    <section class="featured-products" data-aos="fade-up">
+        <h2>Featured Products</h2>
+        <div class="product-carousel">
+            <div class="product-card" data-id="1">
+                <img src="https://images.unsplash.com/photo-1633113212523-6a49f4d3c3d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Firewall Pro">
+                <h3>Firewall Pro</h3>
+                <p>$99.99</p>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="2">
+                <img src="https://images.unsplash.com/photo-1629654297299-c8506221ca97?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="VPN Elite">
+                <h3>VPN Elite</h3>
+                <p>$49.99</p>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+            <div class="product-card" data-id="3">
+                <img src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Antivirus Plus">
+                <h3>Antivirus Plus</h3>
+                <p>$79.99</p>
+                <button class="add-to-cart neon-btn">Add to Cart</button>
+                <button class="quick-view neon-btn">Quick View</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="recently-viewed" data-aos="fade-up">
+        <h2>Recently Viewed</h2>
+        <div class="product-list" id="recently-viewed-list"></div>
+    </section>
+
+    <section class="cyber-tips" data-aos="fade-up">
+        <h2>Cybersecurity Tips</h2>
+        <div class="tips-list">
+            <div class="tip-card" data-aos="zoom-in">
+                <h3>Strong Passwords</h3>
+                <p>Use a mix of letters, numbers, and symbols.</p>
+            </div>
+            <div class="tip-card" data-aos="zoom-in" data-aos-delay="100">
+                <h3>Regular Updates</h3>
+                <p>Keep your software up to date to avoid vulnerabilities.</p>
+            </div>
+            <div class="tip-card" data-aos="zoom-in" data-aos-delay="200">
+                <h3>Avoid Phishing</h3>
+                <p>Don’t click on suspicious links or emails.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" data-aos="fade-up">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-list">
+            <div class="testimonial-card" data-aos="zoom-in">
+                <p>"CyberShop saved my business from a major cyber attack!"</p>
+                <h4>- John D.</h4>
+            </div>
+            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="100">
+                <p>"The best cybersecurity products I’ve ever used."</p>
+                <h4>- Sarah K.</h4>
+            </div>
+            <div class="testimonial-card" data-aos="zoom-in" data-aos-delay="200">
+                <p>"Amazing support and fast delivery!"</p>
+                <h4>- Mike L.</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-banner" data-aos="fade-up">
+        <h2>Protect Your Data Today</h2>
+        <p>Get 20% off your first purchase!</p>
+        <a href="products.html" class="btn neon-btn">Shop Now</a>
+    </section>
+
+    <div class="quick-view-modal" id="quick-view-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modal-image" src="" alt="Product">
+            <h3 id="modal-name"></h3>
+            <p id="modal-price"></p>
+            <p id="modal-desc"></p>
+            <button class="add-to-cart neon-btn" id="modal-add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+
+    <button class="back-to-top">↑</button>
+
+    <footer>
+        <p>&copy; 2025 CyberShop. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

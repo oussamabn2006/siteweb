@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShop - Product Details</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="sticky-nav">
+            <div class="logo">CyberShop</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="product-details" data-aos="fade-up">
+        <img id="product-image" src="" alt="Product">
+        <div class="details">
+            <h1 id="product-name"></h1>
+            <p id="product-price"></p>
+            <p id="product-desc"></p>
+            <button class="add-to-cart neon-btn">Add to Cart</button>
+        </div>
+    </section>
+
+    <section class="reviews" data-aos="fade-up">
+        <h2>Customer Reviews</h2>
+        <div id="review-list"></div>
+        <div class="review-form">
+            <h3>Leave a Review</h3>
+            <textarea id="review-text" placeholder="Write your review..."></textarea>
+            <button id="submit-review" class="neon-btn">Submit Review</button>
+        </div>
+    </section>
+
+    <button class="back-to-top">↑</button>
+
+    <footer>
+        <p>&copy; 2025 CyberShop. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
